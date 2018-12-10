@@ -1,0 +1,87 @@
+<html>
+      <head>
+            <title></title>
+            <style>
+                .grid-container {
+                  display: grid;
+                  grid-template-columns: 50%  50%;
+                
+                  padding-top: 10px;
+                }
+                .grid-item {
+                  
+                
+                  padding-top: 20px;  
+                  text-align: center;
+                  height: 400px;
+                }
+                form{
+                    padding-top: 120px;
+                }
+                img {
+  box-sizing: border-box;
+  display: block;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border: 0;
+  padding: 3px;
+}
+                </style>
+            <script type="text/javascript">
+            function OnSubmitForm(value){
+            if(value == 'Login'){
+            document.myform.action ="http://localhost:3000/login";
+            document.myform.submit();
+            }
+            else
+            if(value == 'Signup')
+            {
+            document.myform.action ="http://localhost:3000/signup";
+            document.myform.submit();
+            }
+            
+         
+            }
+            </script>
+      </head>
+
+      <body >
+            <center>
+                  <H1>Online Hotel Booking</H1>
+                 <H3>Login to view Hotel details</H3>
+                 
+                 
+<div class="grid-container">
+    <div class="grid-item"><img src="./images/hotelroom.jpg"></div>
+    <div class="grid-item"> 
+            
+
+		<form  name="myform" method="get" >
+                <table>
+                <tr>
+                    <td>UserName:</td>
+                    <td><input type="text" name="username" value="" /></td>
+                </tr>
+                
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="password" name="password" value="" /></td>
+                </tr>
+                
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="button" onclick="OnSubmitForm(this.value);" value="Login" />
+                        <input type="button" onclick="OnSubmitForm(this.value);" value="Signup" />
+                    </td>
+                </tr>
+                </table>
+            </form>
+</div>
+    
+  </div>
+                    </center>
+      </body>
+</html>
